@@ -1,0 +1,133 @@
+.edu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.edu__card {
+  padding: 36px;
+  display: flex;
+  gap: 28px;
+}
+
+.edu__left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.edu__degree-badge {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 800;
+  color: #fff;
+  flex-shrink: 0;
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+}
+
+.edu__vline {
+  flex: 1;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--accent-purple), transparent);
+  min-height: 20px;
+}
+
+.edu__body {
+  flex: 1;
+}
+
+.edu__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+.edu__degree {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.edu__school {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.edu__school-name {
+  color: var(--accent-cyan);
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.edu__sep {
+  color: var(--text-muted);
+}
+
+.edu__location {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.edu__period {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 4px 12px;
+  white-space: nowrap;
+}
+
+.edu__section-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.edu__courses {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.edu__course {
+  font-size: 13px;
+  color: var(--text-secondary);
+  background: rgba(139, 92, 246, 0.07);
+  border: 1px solid rgba(139, 92, 246, 0.18);
+  border-radius: 6px;
+  padding: 6px 14px;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.edu__course:hover {
+  background: rgba(139, 92, 246, 0.14);
+  border-color: rgba(139, 92, 246, 0.4);
+  color: var(--text-primary);
+}
+
+@media (max-width: 600px) {
+  .edu__card { flex-direction: column; }
+  .edu__left { flex-direction: row; }
+  .edu__vline { display: none; }
+  .edu__header { flex-direction: column; }
+}
